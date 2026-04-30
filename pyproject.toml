@@ -9,4 +9,4 @@ dependencies = [
 ]
 
 [tool.vercel.scripts]
-build = "cd frontend && npm install && npm run build && rm -rf ../public && mkdir -p ../public && cp -r dist/* ../public/"
+build = "cd frontend && npm install && npm run build && rm -rf ../backend/app/static && mkdir -p ../backend/app/static && cp -r dist/* ../backend/app/static/"

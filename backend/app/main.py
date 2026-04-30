@@ -11,9 +11,8 @@ from .models import AdaptRequest, AdaptResponse, AdaptiveHint, QuizStartResponse
 
 
 app = FastAPI(title="TypeQuest API", version="0.1.0")
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-PUBLIC_DIR = PROJECT_ROOT / "public"
-ASSETS_DIR = PUBLIC_DIR / "assets"
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+ASSETS_DIR = STATIC_DIR / "assets"
 
 app.add_middleware(
     CORSMiddleware,
@@ -52,4 +51,4 @@ def get_result(payload: ResultRequest):
 
 @app.get("/", include_in_schema=False)
 def serve_index():
-    return FileResponse(PUBLIC_DIR / "index.html")
+    return FileResponse(STATIC_DIR / "index.html")
