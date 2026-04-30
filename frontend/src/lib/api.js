@@ -1,4 +1,4 @@
-const API_BASE = "/api";
+const API_BASE = "";
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_BASE}${path}`, {
@@ -17,18 +17,18 @@ async function request(path, options = {}) {
 }
 
 export function startQuiz() {
-  return request("/quiz/start");
+  return request("/api/quiz/start");
 }
 
 export function adaptQuiz(answers) {
-  return request("/quiz/adapt", {
+  return request("/api/quiz/adapt", {
     method: "POST",
     body: JSON.stringify({ answers })
   });
 }
 
 export function getResult(answers) {
-  return request("/quiz/result", {
+  return request("/api/quiz/result", {
     method: "POST",
     body: JSON.stringify({ answers })
   });
