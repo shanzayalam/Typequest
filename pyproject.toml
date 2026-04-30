@@ -3,8 +3,5 @@ name = "typequest"
 version = "0.1.0"
 requires-python = "~=3.12.0"
 
-[project.scripts]
-app = "backend.server:app"
-
 [tool.vercel.scripts]
 build = "cd frontend && npm install && npm run build && rm -rf public && mkdir -p public && cp -r frontend/dist/* public/"
