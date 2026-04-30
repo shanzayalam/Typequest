@@ -1,57 +1,13 @@
 {
-  "source": "fastapi",
-  "generated_at": "2026-04-13T20:40:07.693444+00:00",
+  "source": "mcp",
+  "generated_at": "2026-04-30T17:49:30.948975+00:00",
   "answers": [
     {
       "question_id": "q01",
-      "value": 2
-    },
-    {
-      "question_id": "q02",
-      "value": 3
-    },
-    {
-      "question_id": "q03",
-      "value": 4
-    },
-    {
-      "question_id": "q04",
-      "value": 2
+      "value": 5
     },
     {
       "question_id": "q05",
-      "value": 4
-    },
-    {
-      "question_id": "q06",
-      "value": 4
-    },
-    {
-      "question_id": "q07",
-      "value": 4
-    },
-    {
-      "question_id": "q08",
-      "value": 2
-    },
-    {
-      "question_id": "q09",
-      "value": 4
-    },
-    {
-      "question_id": "q10",
-      "value": 2
-    },
-    {
-      "question_id": "q11",
-      "value": 4
-    },
-    {
-      "question_id": "q12",
-      "value": 3
-    },
-    {
-      "question_id": "q13",
       "value": 4
     },
     {
@@ -60,84 +16,32 @@
     },
     {
       "question_id": "q15",
-      "value": 4
+      "value": 3
     },
     {
-      "question_id": "q21",
-      "value": 3
+      "question_id": "q17",
+      "value": 5
     },
     {
       "question_id": "q22",
       "value": 4
-    },
-    {
-      "question_id": "q29",
-      "value": 4
-    },
-    {
-      "question_id": "q30",
-      "value": 3
-    },
-    {
-      "question_id": "q16",
-      "value": 2
-    },
-    {
-      "question_id": "q17",
-      "value": 4
-    },
-    {
-      "question_id": "q18",
-      "value": 2
-    },
-    {
-      "question_id": "q19",
-      "value": 4
-    },
-    {
-      "question_id": "q20",
-      "value": 3
-    },
-    {
-      "question_id": "q23",
-      "value": 2
-    },
-    {
-      "question_id": "q24",
-      "value": 2
-    },
-    {
-      "question_id": "q25",
-      "value": 4
-    },
-    {
-      "question_id": "q26",
-      "value": 3
-    },
-    {
-      "question_id": "q27",
-      "value": 4
-    },
-    {
-      "question_id": "q28",
-      "value": 2
     }
   ],
   "result": {
-    "primary_type": "ESTJ",
-    "secondary_type": "ISTJ",
-    "fit_ratio": 92.3,
+    "primary_type": "INTJ",
+    "secondary_type": "ENTJ",
+    "fit_ratio": 96.7,
     "function_strengths": {
-      "Ni": 88.5,
-      "Ne": 3.8,
-      "Si": 96.2,
-      "Se": 15.4,
-      "Ti": 92.3,
-      "Te": 100.0,
-      "Fi": 57.7,
+      "Ni": 100.0,
+      "Ne": 11.8,
+      "Si": 0.0,
+      "Se": 5.9,
+      "Ti": 23.5,
+      "Te": 64.7,
+      "Fi": 0.0,
       "Fe": 0.0
     },
-    "summary": "Your strongest fit is ESTJ (Extraverted, Sensing, Thinking, Judging). You likely like creating order, setting standards, and getting practical results. Your answers most strongly matched the Te-Si-Ne-Fi function pattern, with Te and Si standing out the most. A close second was ISTJ (Introverted, Sensing, Thinking, Judging).",
-    "likely_axis": "Ti_vs_Te"
+    "summary": "Your strongest fit is INTJ (Introverted, Intuitive, Thinking, Judging). You likely prefer seeing the big picture, thinking ahead, and making a clear plan. Your answers most strongly matched the Ni-Te-Fi-Se function pattern, with Ni and Te standing out the most. A close second was ENTJ (Extraverted, Intuitive, Thinking, Judging).",
+    "likely_axis": "Fi_vs_Fe"
   }
 }
