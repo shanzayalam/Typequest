@@ -1,5 +1,9 @@
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from .analysis import analyze_answers, select_adaptive_questions, select_initial_questions
 from .artifacts import write_persona_artifact
@@ -7,6 +11,9 @@ from .models import AdaptRequest, AdaptResponse, AdaptiveHint, QuizStartResponse
 
 
 app = FastAPI(title="TypeQuest API", version="0.1.0")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PUBLIC_DIR = PROJECT_ROOT / "public"
+ASSETS_DIR = PUBLIC_DIR / "assets"
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,6 +22,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+if ASSETS_DIR.exists():
+    app.mount("/assets", StaticFiles(directory=ASSETS_DIR), name="assets")
 
 
 @app.get("/api/health")
@@ -38,3 +48,8 @@ def get_result(payload: ResultRequest):
     result = analyze_answers(payload.answers)
     write_persona_artifact(result.model_dump(), payload.answers, source="fastapi")
     return result
+
+
+@app.get("/", include_in_schema=False)
+def serve_index():
+    return FileResponse(PUBLIC_DIR / "index.html")
