@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Dict, Iterable, List, Tuple
 
-from app.models import AnalysisResult, Answer, Question
-from app.quiz_data import BASE_QUESTION_IDS, QUESTION_BANK
+from .models import AnalysisResult, Answer, Question
+from .quiz_data import BASE_QUESTION_IDS, QUESTION_BANK
 
 
 FUNCTIONS = ["Ni", "Ne", "Si", "Se", "Ti", "Te", "Fi", "Fe"]

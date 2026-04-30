@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.analysis import analyze_answers, select_adaptive_questions, select_initial_questions
-from app.artifacts import write_persona_artifact
-from app.models import AdaptRequest, AdaptResponse, AdaptiveHint, QuizStartResponse, ResultRequest
+from .analysis import analyze_answers, select_adaptive_questions, select_initial_questions
+from .artifacts import write_persona_artifact
+from .models import AdaptRequest, AdaptResponse, AdaptiveHint, QuizStartResponse, ResultRequest
 
 
 app = FastAPI(title="TypeQuest API", version="0.1.0")

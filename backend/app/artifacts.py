@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable
 
-from app.models import Answer
+from .models import Answer
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]

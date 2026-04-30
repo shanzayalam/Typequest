@@ -1,8 +1,8 @@
 from mcp.server.fastmcp import FastMCP
 
-from app.analysis import analyze_answers
-from app.artifacts import write_persona_artifact
-from app.models import Answer
+from .analysis import analyze_answers
+from .artifacts import write_persona_artifact
+from .models import Answer
 
 
 mcp = FastMCP("TypeQuest-MBTI")

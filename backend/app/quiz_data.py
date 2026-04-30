@@ -1,4 +1,4 @@
-from app.models import Question
+from .models import Question
 
 
 QUESTION_BANK = [
