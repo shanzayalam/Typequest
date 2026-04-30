@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f6edff;
+  background: #12051f;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(41, 216, 255, 0.22), transparent 24%),
+    radial-gradient(circle at 80% 18%, rgba(255, 69, 199, 0.2), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(127, 92, 255, 0.25), transparent 35%),
+    linear-gradient(180deg, #12051f 0%, #1a0830 50%, #12051f 100%);
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+}
+
+@keyframes radarPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(41, 216, 255, 0.18));
+  }
+  50% {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 22px rgba(255, 69, 199, 0.28));
+  }
+}
+
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/15 bg-white/10 shadow-panel backdrop-blur-xl;
+  }
+
+  .glass-chip {
+    @apply border border-white/15 bg-white/10 backdrop-blur-md;
+  }
+
+  .radar-pulse {
+    animation: radarPulse 3.8s ease-in-out infinite;
+  }
+
+  .float-glow {
+    animation: floatGlow 5s ease-in-out infinite;
+  }
+}
